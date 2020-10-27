@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:black;
+    
+}
+
+.container{
+    height: 100vh;
+    background: #000;
+}
+
+.container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#f00,#0f0,#0ff,#ff0,#f00,#0ff,#ffaabb,#800080,#f00,#abf0ab,#0bcf,#00c,#00bbff,#800080,#0f0);
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+
+video{
+    object-fit: cover;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 5em;
+    font-family: Birthdaze;
+    letter-spacing: 0.2em;
+}
+
+h1 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+
+h1 span:nth-child(1){
+    animation-delay: 1s;
+}
+
+h1 span:nth-child(2){
+    animation-delay: 2s;
+}
+
+h1 span:nth-child(3){
+    animation-delay: 2.5s;
+}
+
+h1 span:nth-child(4){
+    animation-delay: 3s;
+}
+
+h1 span:nth-child(5){
+    animation-delay: 3.5s;
+}
+
+h1 span:nth-child(6){
+    animation-delay: 3.75s;
+}
+
+h1 span:nth-child(7){
+    animation-delay: 4s;
+}
+
+h1 span:nth-child(8){
+    animation-delay: 4.5s;
+}
+
+h1 span:nth-child(9){
+    animation-delay: 4.75s;
+}
+
+h1 span:nth-child(10){
+    animation-delay: 5s;
+}
+
+h1 span:nth-child(11){
+    animation-delay: 5.5s;
+}
+
+h1 span:nth-child(12){
+    animation-delay: 5.75s;
+}
+
+h1 span:nth-child(13){
+    animation-delay: 6s;
+}
+
+
+h2{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 5em;
+    font-family: Oblique;
+    letter-spacing: 0.2em;
+}
+
+h2 span{
+    opacity: 0;
+    display: inline-block;
+    animation: ani 1s linear forwards;
+}
+
+@keyframes ani{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+
+
+h2 span:nth-child(1){
+    animation-delay: 8s;
+}
+h2 span:nth-child(2){
+    animation-delay: 8.5s;
+}
+h2 span:nth-child(3){
+    animation-delay: 8.75s;
+}
+h2 span:nth-child(4){
+    animation-delay: 9s;
+}
+h2 span:nth-child(5){
+    animation-delay: 9.5s;
+}
+h2 span:nth-child(6){
+    animation-delay: 9.75s;
+}
+h2 span:nth-child(7){
+    animation-delay: 10s;
+}
+
+
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 150px auto;
+    perspective: 1000px;
+    /* margin-bottom: 500px; */
+    margin-top: 10px;
+}
+
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg)translateZ(-300px);
+    animation: appu 25s steps(1000,end)infinite;
+}
+
+.single-img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+}
+
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;
+}
+
+
+
+.single-img.img-one{
+    transform:rotateY(0deg) translateZ(300px);
+}
+
+.single-img.img-two{
+    transform:rotateY(60deg) translateZ(300px);
+}
+
+.single-img.img-three{
+    transform:rotateY(120deg) translateZ(300px);
+}
+
+.single-img.img-four{
+    transform:rotateY(180deg) translateZ(300px);
+}
+
+.single-img.img-five{
+    transform:rotateY(240deg) translateZ(300px);
+}
+
+.single-img.img-six{
+    transform:rotateY(300deg) translateZ(300px);
+}
+
+.single-img.img-seven{
+    transform:rotateY(300deg) translateZ(300px);
+}
+
+
+
+
+
+img{
+    filter: grayscale(0%);
+    transition: 2s;
+    cursor: pointer;
+}
+
+img:hover{
+    transition: 2s;
+    filter: grayscale(0);
+}
+@keyframes appu{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
